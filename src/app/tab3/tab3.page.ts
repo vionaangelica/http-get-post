@@ -32,7 +32,7 @@ export class Tab3Page {
       console.log(res)
       this.toastCtrl.create({
           duration : 4000,
-          message  : "Id : " + res.id + ", email : " + res.email + ", First Name : " + res.first_name + ", Last Name : " + res.last_name  
+          message  : "Menambahkan data -> Id : " + res.id + ", email : " + res.email + ", First Name : " + res.first_name + ", Last Name : " + res.last_name  
       }).then(l=>l.present())
       if(loading){
         loading.dismiss()
