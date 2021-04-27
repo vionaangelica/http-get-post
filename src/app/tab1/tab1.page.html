@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Ini catatan
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-label>Halaman ini adalah catatan http get dan post untuk latihannya ada di tab 2 dengan judul "Halaman 1"</ion-label>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="post.userId"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="post.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="post.body"></ion-input>
+  </ion-item>
+  <ion-button (click)="submit()">SIMPAN DATA</ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let dPost of dataPOST">
+      {{dPost.title}}
+    </ion-item>
+  </ion-list>
+
+  
 </ion-content>
