@@ -31,8 +31,8 @@ export class Tab3Page {
     this.http.post("https://reqres.in/api/users?page=2", this.post).subscribe((res: any)=>{
       console.log(res)
       this.toastCtrl.create({
-          duration : 3000,
-          message  : "ID for new item is "+res.id 
+          duration : 4000,
+          message  : "Id : " + res.id + ", email : " + res.email + ", First Name : " + res.first_name + ", Last Name : " + res.last_name  
       }).then(l=>l.present())
       if(loading){
         loading.dismiss()
@@ -63,8 +63,8 @@ export class Tab3Page {
     this.http.put("https://reqres.in/api/users?page=2", this.post).subscribe((res: any)=>{
       console.log(res)
       this.toastCtrl.create({
-          duration : 3000,
-          message  : "Data dengan id " + res.id + " sudah terupdate" 
+          duration : 4000,
+          message  : "Mengupdate data dengan Id : " + res.id + " menjadi -> email : " + res.email + ", First Name : " + res.first_name + ", Last Name : " + res.last_name  
       }).then(l=>l.present())
       if(loading){
         loading.dismiss()
